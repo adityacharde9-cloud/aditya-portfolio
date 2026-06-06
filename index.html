@@ -6,163 +6,282 @@
 <title>Aditya Murlidhar Charde | Portfolio</title>
 
 <style>
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-    background:#f4f4f4;
-    color:#333;
+background:linear-gradient(-45deg,#0f172a,#1e3a8a,#0f172a,#2563eb);
+background-size:400% 400%;
+animation:bgmove 10s ease infinite;
+color:white;
+}
+
+@keyframes bgmove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
 }
 
 header{
-    background:#0d6efd;
-    color:white;
-    text-align:center;
-    padding:60px 20px;
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
 }
 
-header h1{
-    font-size:3rem;
+.profile{
+width:220px;
+height:220px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid white;
+box-shadow:0 0 30px rgba(255,255,255,0.4);
+animation:float 3s ease-in-out infinite;
 }
 
-header p{
-    margin-top:10px;
-    font-size:1.2rem;
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
+100%{transform:translateY(0);}
+}
+
+h1{
+font-size:3rem;
+margin-top:20px;
+}
+
+#typing{
+font-size:1.4rem;
+margin-top:10px;
+color:#facc15;
+font-weight:bold;
+height:40px;
+}
+
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:15px 30px;
+background:#25D366;
+color:white;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.08);
 }
 
 section{
-    padding:50px 10%;
+padding:80px 10%;
 }
 
-h2{
-    color:#0d6efd;
-    margin-bottom:20px;
+.section-title{
+text-align:center;
+font-size:2.2rem;
+margin-bottom:40px;
 }
 
 .card{
-    background:white;
-    padding:20px;
-    border-radius:10px;
-    margin-bottom:20px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+background:rgba(255,255,255,0.1);
+backdrop-filter:blur(10px);
+padding:25px;
+border-radius:20px;
+margin-bottom:20px;
+transition:0.4s;
 }
 
-.skills span{
-    display:inline-block;
-    background:#0d6efd;
-    color:white;
-    padding:8px 15px;
-    border-radius:20px;
-    margin:5px;
+.card:hover{
+transform:translateY(-10px);
 }
 
-.whatsapp-btn{
-    display:inline-block;
-    background:#25D366;
-    color:white;
-    text-decoration:none;
-    padding:15px 30px;
-    border-radius:30px;
-    font-size:18px;
-    margin-top:20px;
+.skills{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+justify-content:center;
 }
 
-.whatsapp-btn:hover{
-    background:#1da851;
+.skill{
+background:#2563eb;
+padding:10px 20px;
+border-radius:30px;
 }
 
 footer{
-    text-align:center;
-    background:#222;
-    color:white;
-    padding:20px;
+text-align:center;
+padding:30px;
+background:rgba(0,0,0,0.3);
 }
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+width:70px;
+height:70px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:32px;
+text-decoration:none;
+color:white;
+box-shadow:0 0 20px rgba(0,0,0,0.4);
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.1);}
+100%{transform:scale(1);}
+}
+
+@media(max-width:768px){
+
+h1{
+font-size:2rem;
+}
+
+.profile{
+width:180px;
+height:180px;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-    <h1>Aditya Murlidhar Charde</h1>
-    <p>Student | Future Electrical Engineer | Innovator</p>
+
+<img src="ADITYA photo.jpg" class="profile" alt="Aditya">
+
+<h1>Aditya Murlidhar Charde</h1>
+
+<div id="typing"></div>
+
+<a href="https://wa.me/917030540957" class="btn">
+Chat on WhatsApp
+</a>
+
 </header>
 
 <section>
-    <h2>About Me</h2>
 
-    <div class="card">
-        <p>
-            Hello! I am Aditya Murlidhar Charde, a Class 12 student from Maharashtra, India.
-            I am passionate about Electrical Engineering, PCB Design, Solar Energy,
-            AI Projects, Video Editing, Coding, and Technology.
-        </p>
-    </div>
+<h2 class="section-title">About Me</h2>
+
+<div class="card">
+I am Aditya Murlidhar Charde, a passionate student interested in Electrical Engineering, PCB Design, Solar Energy, AI Projects, Coding, Automation, Photography and Technology.
+</div>
+
 </section>
 
 <section>
-    <h2>Education</h2>
 
-    <div class="card">
-        <h3>Class 12 Student</h3>
-        <p>Science Stream</p>
-        <p>Preparing for Engineering Career</p>
-    </div>
+<h2 class="section-title">Skills</h2>
+
+<div class="skills">
+
+<div class="skill">Electrical Engineering</div>
+<div class="skill">PCB Design</div>
+<div class="skill">Solar Projects</div>
+<div class="skill">AI Projects</div>
+<div class="skill">Coding</div>
+<div class="skill">Video Editing</div>
+<div class="skill">Photography</div>
+<div class="skill">Automation</div>
+
+</div>
+
 </section>
 
 <section>
-    <h2>Skills</h2>
 
-    <div class="card skills">
-        <span>Electrical Engineering</span>
-        <span>PCB Design</span>
-        <span>Solar Energy</span>
-        <span>Video Editing</span>
-        <span>Coding</span>
-        <span>AI Projects</span>
-        <span>Automation</span>
-    </div>
+<h2 class="section-title">Projects</h2>
+
+<div class="card">
+<h3>Solar Smart Battery Backup System</h3>
+<p>Renewable energy solution for reducing solar banking losses.</p>
+</div>
+
+<div class="card">
+<h3>AI Based Smart Pesticide Sprayer</h3>
+<p>Solar powered crop monitoring and automatic pesticide spraying system.</p>
+</div>
+
+<div class="card">
+<h3>Remote Controlled Farm Trolley</h3>
+<p>Heavy duty electric trolley capable of carrying 400-500 kg.</p>
+</div>
+
 </section>
 
 <section>
-    <h2>Projects</h2>
 
-    <div class="card">
-        <h3>Solar Smart Battery Backup System</h3>
-        <p>Renewable energy project to reduce solar banking losses.</p>
-    </div>
+<h2 class="section-title">Contact</h2>
 
-    <div class="card">
-        <h3>AI-Based Smart Pesticide Sprayer</h3>
-        <p>Solar-powered crop monitoring and pesticide spraying system.</p>
-    </div>
+<div class="card">
 
-    <div class="card">
-        <h3>Remote Controlled Farm Trolley</h3>
-        <p>Heavy-duty electric trolley capable of carrying 400-500 kg.</p>
-    </div>
-</section>
+<p><strong>Phone:</strong> 7030540957</p>
 
-<section>
-    <h2>Contact Me</h2>
+<br>
 
-    <div class="card">
-        <p><strong>Phone:</strong> 7030540957</p>
+<a href="https://wa.me/917030540957" class="btn">
+Message Me on WhatsApp
+</a>
 
-        <a class="whatsapp-btn"
-        href="https://wa.me/917030540957?text=Hello%20Aditya,%20I%20visited%20your%20website."
-        target="_blank">
-        Chat on WhatsApp
-        </a>
-    </div>
+</div>
+
 </section>
 
 <footer>
-    <p>© 2026 Aditya Murlidhar Charde. All Rights Reserved.</p>
+
+© 2026 Aditya Murlidhar Charde | All Rights Reserved
+
 </footer>
+
+<a href="https://wa.me/917030540957" class="whatsapp">
+💬
+</a>
+
+<script>
+
+const text = "Future Electrical Engineer | Innovator | Creator";
+
+let i = 0;
+
+function typing(){
+
+if(i < text.length){
+
+document.getElementById("typing").innerHTML += text.charAt(i);
+
+i++;
+
+setTimeout(typing,100);
+
+}
+
+}
+
+typing();
+
+</script>
 
 </body>
 </html>
